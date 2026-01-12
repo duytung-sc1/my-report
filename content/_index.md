@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 5/01/2026 to na/na/2026
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/images/avatar.jpg)
 
 ### Report Content
 
