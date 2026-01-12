@@ -1,6 +1,6 @@
 baseURL = "https://duytung-sc1.github.io/my-report/"
-relativeURLs = false
-canonifyURLs = false
+relativeURLs = true
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
