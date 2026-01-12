@@ -1,4 +1,4 @@
----
+14s---
 title: "Internship Report"
 date: 2024-01-01
 weight: 1
@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 5/01/2026 to na/na/2026
 
-<img src="/images/avatar.jpg" width="150" style="border-radius: 10px;">
+<img src="/images/avatar.jpg" width="150" style="border-radius: 14px;">
 
 ### Report Content
 
