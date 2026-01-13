@@ -15,7 +15,7 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 
 **Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
 
-**Tuần 2:** Các dịch vụ Lưu trữ (Storage) và Cơ sở dữ liệu (Databases)](1.2-week2/)
+**Tuần 2:** Các dịch vụ Lưu trữ (Storage) và Cơ sở dữ liệu (Databases)](1.2-week2/).
 
 **Tuần 3:** [Làm công việc B...](1.3-week3/)
 
