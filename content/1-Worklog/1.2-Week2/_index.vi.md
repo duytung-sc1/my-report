@@ -5,15 +5,14 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
-### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Week 2 Objectives:
+
+* **Tham gia đào tạo chuyên sâu:** Hoàn thành tuần 1 và tuần 2 trong khóa học AWS Specialforce.
+* **Nắm vững kiến thức nền tảng và thực hành:** Hiểu rõ 3 khái niệm cốt lõi (S3, EBS, RDS) và áp dụng để xây dựng hệ thống upload file (Hands-on).
+* **Xác định hướng đi:** Lựa chọn đề tài cho dự án sắp tới.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
@@ -25,35 +24,12 @@ pre: " <b> 1.2. </b> "
 | 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
-### Kết quả đạt được tuần 2:
+### Tuần 2: Kết quả đạt được
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* **Hoàn thành đào tạo chuyên sâu:** Đã hoàn tất khóa học **AWS Specialforce**, nắm bắt được các kiến thức nâng cao và tư duy triển khai dịch vụ trên AWS.
+* **Triển khai thành công hệ thống (Hands-on):**
+    * Xây dựng hoàn thiện hệ thống upload file hoạt động ổn định.
+    * Cấu hình thành công **S3 Bucket** với các chính sách vòng đời (Lifecycle policies) phù hợp.
+    * Thiết lập và kết nối cơ sở dữ liệu **RDS**, quản lý tốt **EBS Snapshots** để sao lưu dữ liệu.
+* **Chốt đề tài dự án:** Đã xác định rõ ràng phạm vi và tên đề tài cho dự án sắp tới, sẵn sàng cho giai đoạn lập kế hoạch chi tiết.
 
