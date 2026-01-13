@@ -5,16 +5,13 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
+* **Course Completion:** Study and complete week 1 and week 2 the AWS Specialforce training course.
+* **Core Concepts & Implementation:** Comprehend key storage and database services (S3, EBS, RDS) and execute the hands-on project: Building a file upload system.
+* **Project Selection:** Choose a topic for the upcoming project.
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
