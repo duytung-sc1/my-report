@@ -8,11 +8,11 @@ pre: " <b> 1.2. </b> "
 
 
 
-### Week 2 Objectives:
+### Week 2 Objectives (Completed):
 
-* **Tham gia đào tạo chuyên sâu:** Hoàn thành tuần 1 và tuần 2 trong khóa học AWS Specialforce.
-* **Nắm vững kiến thức nền tảng và thực hành:** Hiểu rõ 3 khái niệm cốt lõi (S3, EBS, RDS) và áp dụng để xây dựng hệ thống upload file (Hands-on).
-* **Xác định hướng đi:** Lựa chọn đề tài cho dự án sắp tới.
+* **Tiến độ đào tạo:** Hoàn thành nội dung Tuần 1 và Tuần 2 của khóa học AWS Specialforce.
+* **Kiến thức & Thực hành:** Nắm vững các khái niệm S3, EBS, RDS và hoàn thành bài thực hành xây dựng hệ thống upload file.
+* **Dự án:** Lựa chọn và chốt đề tài cho dự án sắp tới.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
@@ -26,10 +26,9 @@ pre: " <b> 1.2. </b> "
 
 ### Tuần 2: Kết quả đạt được
 
-* **Hoàn thành đào tạo chuyên sâu:** Đã hoàn tất khóa học **AWS Specialforce**, nắm bắt được các kiến thức nâng cao và tư duy triển khai dịch vụ trên AWS.
+* **Hoàn thành tiến độ học tập:** Đã hoàn tất các module và bài tập của Tuần 1 và Tuần 2 trong lộ trình khóa **AWS Specialforce**.
 * **Triển khai thành công hệ thống (Hands-on):**
     * Xây dựng hoàn thiện hệ thống upload file hoạt động ổn định.
-    * Cấu hình thành công **S3 Bucket** với các chính sách vòng đời (Lifecycle policies) phù hợp.
-    * Thiết lập và kết nối cơ sở dữ liệu **RDS**, quản lý tốt **EBS Snapshots** để sao lưu dữ liệu.
-* **Chốt đề tài dự án:** Đã xác định rõ ràng phạm vi và tên đề tài cho dự án sắp tới, sẵn sàng cho giai đoạn lập kế hoạch chi tiết.
+    * Cấu hình thành công **S3 Bucket**, thiết lập **RDS** và quản lý **EBS Snapshots**.
+* **Chốt đề tài dự án:** Đã xác định xong tên và phạm vi đề tài để bắt đầu thực hiện.
 
