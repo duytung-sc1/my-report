@@ -7,11 +7,11 @@ pre: " <b> 1.2. </b> "
 ---
 
 
-### Week 2 Objectives:
+### Week 2 Objectives (Completed):
 
-* **Course Completion:** Study and complete week 1 and week 2 the AWS Specialforce training course.
-* **Core Concepts & Implementation:** Comprehend key storage and database services (S3, EBS, RDS) and execute the hands-on project: Building a file upload system.
-* **Project Selection:** Choose a topic for the upcoming project.
+* **Training Progress:** Complete Week 1 and Week 2 content of the AWS Specialforce course.
+* **Core Concepts & Implementation:** Master key concepts (S3, EBS, RDS) and successfully build the file upload system.
+* **Project Selection:** Finalize the topic for the upcoming project.
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
@@ -21,12 +21,10 @@ pre: " <b> 1.2. </b> "
 | 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
-
 ### Week 2: Key Achievements & Results
 
-* **Training Completion:** Successfully finished the **AWS Specialforce** week 1, week2 course, gaining in-depth insights into cloud service deployment strategies.
+* **Course Progress:** Successfully completed the modules and exercises for Week 1 and Week 2 of the **AWS Specialforce** training.
 * **Technical Deliverables (Hands-on):**
     * Deployed a fully functional file upload system.
-    * Successfully configured **S3 Buckets** with appropriate Lifecycle policies.
-    * Set up and managed **RDS** instances and utilized **EBS Snapshots** for data durability.
-* **Project Definition:** Finalized the project topic and scope, ready to proceed to the planning and implementation phase.
+    * Successfully configured **S3 Buckets**, set up **RDS**, and managed **EBS Snapshots**.
+* **Project Definition:** Finalized the project topic and scope, ready to proceed.
