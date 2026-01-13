@@ -22,33 +22,11 @@ pre: " <b> 1.2. </b> "
 | 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
-### Week 2 Achievements:
+### Week 2: Key Achievements & Results
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Training Completion:** Successfully finished the **AWS Specialforce** week 1, week2 course, gaining in-depth insights into cloud service deployment strategies.
+* **Technical Deliverables (Hands-on):**
+    * Deployed a fully functional file upload system.
+    * Successfully configured **S3 Buckets** with appropriate Lifecycle policies.
+    * Set up and managed **RDS** instances and utilized **EBS Snapshots** for data durability.
+* **Project Definition:** Finalized the project topic and scope, ready to proceed to the planning and implementation phase.
