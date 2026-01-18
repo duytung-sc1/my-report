@@ -13,13 +13,13 @@ pre: " <b> 1.2. </b> "
 * **Core Concepts & Implementation:** Master key concepts (S3, EBS, RDS) and successfully build the file upload system.
 * **Project Selection:** Finalize the topic for the upcoming project.
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| No. | Task                                                                                                      | Start Date | End Date   | Reference Source                          |
+| --- | --------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ----------------------------------------- |
+| 1   | - Learn and practice S3 buckets and lifecycle policies                                                     | 12/01/2026 | 12/01/2026 | https://cloudjourney.awsstudygroup.com/   |
+| 2   | - Learn and practice EBS volumes and snapshots                                                             | 13/01/2026 | 13/01/2026 | https://cloudjourney.awsstudygroup.com/   |
+| 3   | - Continue practicing RDS setup and management                                                             | 15/01/2026 | 15/01/2026 | https://cloudjourney.awsstudygroup.com/   |
+| 4   | - Choose a project topic and complete videos for Specialforce Week 2 <br> - Search for materials to deploy any web application | 16/01/2026 | 16/01/2026 | https://cloudjourney.awsstudygroup.com/   |
+
 
 ### Week 2: Key Achievements & Results
 
@@ -28,3 +28,4 @@ pre: " <b> 1.2. </b> "
     * Deployed a fully functional file upload system.
     * Successfully configured **S3 Buckets**, set up **RDS**, and managed **EBS Snapshots**.
 * **Project Definition:** Finalized the project topic and scope, ready to proceed.
+* **Learning about web coding:** Learned about HTML and next week is CSS
