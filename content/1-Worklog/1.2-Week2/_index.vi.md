@@ -17,11 +17,10 @@ pre: " <b> 1.2. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tìm hiểu và thực hành S3 buckets and lifecycle policies                                                                                             | 12/01/2026   | 12/01/2026      |<https://cloudjourney.awsstudygroup.com/>|
+| 3   | - Tìm hiểu và thực hành EBS volumes and snapshots                                           | 13/01/2026   | 13/01/2026     | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tiếp tục thực hành về RDS setup and management | 15/01/2026   | 15/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Chọn đề tài cho dự án và hoàn thành các video trên specialforce week 2 <br> -Tìm kiếm tài liệu cho việc triển khai web bất kỳ | 16/01/2026   | 16/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Tuần 2: Kết quả đạt được
@@ -31,4 +30,5 @@ pre: " <b> 1.2. </b> "
     * Xây dựng hoàn thiện hệ thống upload file hoạt động ổn định.
     * Cấu hình thành công **S3 Bucket**, thiết lập **RDS** và quản lý **EBS Snapshots**.
 * **Chốt đề tài dự án:** Đã xác định xong tên và phạm vi đề tài để bắt đầu thực hiện.
+* **Tìm hiểu về lập trình web:** Đã học qua về phần HTML và tiếp tới sẽ là CSS
 
