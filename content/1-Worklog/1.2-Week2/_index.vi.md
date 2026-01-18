@@ -17,10 +17,10 @@ pre: " <b> 1.2. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Tìm hiểu và thực hành S3 buckets and lifecycle policies                                                                                             | 12/01/2026   | 12/01/2026      |<https://cloudjourney.awsstudygroup.com/>|
-| 3   | - Tìm hiểu và thực hành EBS volumes and snapshots                                           | 13/01/2026   | 13/01/2026     | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tiếp tục thực hành về RDS setup and management | 15/01/2026   | 15/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Chọn đề tài cho dự án và hoàn thành các video trên specialforce week 2 <br> -Tìm kiếm tài liệu cho việc triển khai web bất kỳ | 16/01/2026   | 16/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 1   | - Tìm hiểu và thực hành S3 buckets and lifecycle policies                                                                                             | 12/01/2026   | 12/01/2026      |<https://cloudjourney.awsstudygroup.com/>|
+| 2   | - Tìm hiểu và thực hành EBS volumes and snapshots                                           | 13/01/2026   | 13/01/2026     | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Tiếp tục thực hành về RDS setup and management | 15/01/2026   | 15/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Chọn đề tài cho dự án và hoàn thành các video trên specialforce week 2 <br> -Tìm kiếm tài liệu cho việc triển khai web bất kỳ | 16/01/2026   | 16/01/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Tuần 2: Kết quả đạt được
