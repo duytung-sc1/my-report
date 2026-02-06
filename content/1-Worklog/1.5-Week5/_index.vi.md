@@ -29,7 +29,7 @@ pre: " <b> 1.5. </b> "
 
 ---
 
-### Kết quả đạt được tuần 5:
+### Kết quả đạt được ở tuần 5:
 
 * Hiểu mô hình **serverless architecture** trong AWS.
 * Có thể tạo và triển khai **AWS Lambda function**.
