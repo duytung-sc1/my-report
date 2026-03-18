@@ -13,8 +13,8 @@ pre: "<b>4.2.</b> "
 | Mục | Chi tiết |
 | --- | --- |
 | **Tên sự kiện** | AI Agents, Prompt Engineering, and AIoT Projects on AWS |
-| **Thời gian** | [Cập nhật sau] |
-| **Địa điểm** | [Cập nhật sau] |
+| **Thời gian** | 14/03/2026 |
+| **Địa điểm** | tầng 26 tòa nhà Bitexco |
 | **Vai trò** | Người tham dự (FCJ Cloud Intern) |
 
 ## Mục tiêu sự kiện
