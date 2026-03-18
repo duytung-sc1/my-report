@@ -70,4 +70,16 @@ pre: " <b> 4.1. </b> "
 Tham dự **“AWS re:Invent 2025 Recap”** tại văn phòng AWS Việt Nam là một cột mốc quan trọng trong quá trình thực tập của tôi:
 
 #### Mở rộng tầm nhìn
-- Các phiên thảo luận đã làm rõ rằng **Agentic AI** chính là tương lai gần. Việc xem demo về Flow Agent đã gợi cảm hứng cho các
+- Các phiên thảo luận đã làm rõ rằng **Agentic AI** chính là tương lai gần. Việc xem demo về Flow Agent đã gợi cảm hứng cho các tính năng báo cáo trong dự án của chúng tôi.
+- Hiểu về **Multimodal RAG** đã giúp tôi nhận ra các khả năng vượt xa việc xử lý văn bản thuần túy—điều này rất cần thiết cho các giai đoạn tương lai của Nền tảng Bảo mật khi cần phân tích ảnh chụp màn hình.
+
+#### Xác thực kỹ thuật
+- Sự ra đời của **S3 Vector** đã xác nhận nhu cầu của nhóm chúng tôi về một giải pháp lưu trữ chi phí thấp cho việc phân tích log.
+- Kết nối với **Mr. Thi** và các SA khác đã giúp làm rõ những thắc mắc về **Chính sách IAM** và các thực hành **Serverless** tốt nhất mà tôi từng gặp khó khăn trong Tuần 3.
+
+#### Cộng đồng & Kết nối
+- Không khí tại văn phòng AWS rất năng động với các nhà phát triển chia sẻ về những thách thức thực tế.
+- Tôi đã có cơ hội thảo luận về dự án nhóm **“TheBois”** với các chuyên gia trong ngành và nhận được những phản hồi giá trị về kiến trúc đề xuất.
+
+
+> Tóm lại, sự kiện này không chỉ cập nhật kiến thức kỹ thuật mà còn cung cấp các công cụ cụ thể (Agents, S3 Vector) mà tôi có thể áp dụng ngay lập tức vào **Nền tảng Đánh giá Cơ sở Bảo mật Website (Website Security Baseline Assessment Platform)**.
