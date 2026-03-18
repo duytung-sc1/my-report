@@ -34,4 +34,4 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 11:** [Advanced Security](1.11-week11/)
 
-**Week 12:** [Optimization & Best Practices](1.12-week12/)
+**Week 12:** [Optimization & Best Practices](1.12-Week12/)
