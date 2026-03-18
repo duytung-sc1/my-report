@@ -1,125 +1,73 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Sự kiện 1"
+date: 2026-01-27
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Báo cáo Tổng kết: “AWS RE:INVENT 2025 RECAP (VIETNAM)”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Chi tiết Sự kiện
+- **Ngày & Giờ:** 27 tháng 1, 2026
+- **Địa điểm:** Văn phòng AWS Việt Nam (Tầng 26 & 36), TP. Hồ Chí Minh
+- **Vai trò:** Người tham dự (Thực tập sinh Cloud tại FCJ)
 
-### Mục Đích Của Sự Kiện
+### Mục tiêu Sự kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Cập nhật các công bố quan trọng nhất từ AWS re:Invent 2025 (Las Vegas).
+- Tìm hiểu sâu về Generative AI, cụ thể là Agentic AI và Amazon Bedrock.
+- Khám phá các tối ưu hóa mới về lưu trữ dữ liệu và hạ tầng (SageMaker, S3).
+- Kết nối với các Kiến trúc sư Giải pháp (Solution Architects) của AWS và cộng đồng công nghệ tại địa phương.
 
-### Danh Sách Diễn Giả
+### Diễn giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Mr. Thi** – Solution Architect (Chủ đề: Generative AI & Agents)
+- **Mr. Tung** – Speaker (Chủ đề: OpenSearch & Agentic Search)
+- **Đội ngũ AWS Solution Architects & Quản lý khách hàng**
 
-### Nội Dung Nổi Bật
+### Các nội dung nổi bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Phiên 1: Generative AI & Agents
+- **Amazon Nova Models**: Giới thiệu các mô hình nền tảng (foundation models) hiệu suất cao mới.
+- **Bedrock Agents**: Đi sâu vào khả năng Điều phối (Orchestration), Luồng công việc (Flows), cùng các tính năng mới về **Bộ nhớ (Memory)** và **Hàng rào bảo vệ (Guardrails)**.
+- **Agentic AI**: Chuyển dịch từ các chatbot đơn giản sang các tác nhân tự hành (autonomous agents) có khả năng thực hiện quy trình công việc đa bước.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Phiên 2: SageMaker Unified Studio & Cập nhật S3
+- **Unified Studio**: Một môi trường phát triển (IDE) duy nhất giúp kết nối các Kỹ sư Dữ liệu, Nhà khoa học Dữ liệu và Kỹ sư AI.
+- **S3 Tables**: Hỗ trợ định dạng bảng Apache Iceberg nguyên bản ngay trong S3.
+- **S3 Vector**: Tính năng mới cho phép lưu trữ vector trực tiếp trên S3, giúp giảm đáng kể chi phí.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Phiên 3 & 4: Tìm kiếm & AI Đa phương thức (Multimodal)
+- **OpenSearch Serverless**: Tích hợp với MCP (Model Context Protocol) và Bộ nhớ Tác nhân (Agentic Memory).
+- **Nova Multimodal Embeddings**: Chuyển đổi video và hình ảnh thành vector để phục vụ tìm kiếm.
+- **Bedrock Data Automation**: Tự động trích xuất thông tin chuyên sâu từ các nội dung đa phương tiện.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Phiên 5: Hạ tầng AI
+- **SageMaker HyperPod**: Quản lý nâng cao cho các cụm GPU quy mô lớn.
+- **SageMaker MLflow**: Quản lý toàn bộ vòng đời cho các dự án Machine Learning.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+### Các bài học kinh nghiệm
 
-#### Domain-Driven Design (DDD)
+#### Tương lai thuộc về "Agentic"
+- **Quy trình tự hành**: Sự chuyển dịch từ "Kỹ thuật Prompt" sang "Kỹ thuật Tác nhân" (Agent Engineering). Các tác nhân có bộ nhớ có thể duy trì ngữ cảnh và thực hiện các nhiệm vụ phức tạp mà không cần can thiệp liên tục.
+- **Hàng rào bảo vệ (Guardrails) là thiết yếu**: Khi các tác nhân trở nên tự hành hơn, việc thiết lập các chính sách nghiêm ngặt và hàng rào bảo mật là bắt buộc.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Tối ưu hóa Dữ liệu & Tính toán
+- **Hiệu quả chi phí**: S3 Vector là một yếu tố thay đổi cuộc chơi cho các dự án yêu cầu tìm kiếm vector (như RAG) nhưng có ngân sách hạn chế.
+- **Sự cộng tác**: SageMaker Unified Studio giúp tinh giản quy trình làm việc giữa khâu chuẩn bị dữ liệu và huấn luyện mô hình.
 
-#### Event-Driven Architecture
+### Ứng dụng vào công việc
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+- **Tích hợp dự án (Nền tảng Bảo mật)**:
+    - Đánh giá **Bedrock Agents** để tự động hóa quy trình "quét lỗ hổng" (ví dụ: một tác nhân tự chạy quét, phân tích log và dự thảo báo cáo).
+    - Triển khai **S3 Vector** để lưu trữ log và các dấu hiệu lỗ hổng (signatures) một cách hiệu quả cho backend của dự án.
+- **Cải thiện kiến trúc**: Cân nhắc áp dụng **Cognito** để quản lý người dùng dựa trên các thảo luận với đội ngũ SA.
+- **Thực hành tốt nhất (Best Practices)**: Áp dụng tư duy "Ưu tiên Serverless" (Serverless first) học được từ các phiên kết nối.
 
-#### Compute Evolution
+### Trải nghiệm Sự kiện
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Tham dự **“AWS re:Invent 2025 Recap”** tại văn phòng AWS Việt Nam là một cột mốc quan trọng trong quá trình thực tập của tôi:
 
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+#### Mở rộng tầm nhìn
+- Các phiên thảo luận đã làm rõ rằng **Agentic AI** chính là tương lai gần. Việc xem demo về Flow Agent đã gợi cảm hứng cho các
