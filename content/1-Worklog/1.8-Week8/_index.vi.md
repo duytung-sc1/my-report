@@ -1,59 +1,41 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
+title: "Week 8 Worklog"
+date: 2026-02-23
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu về monitoring và logging trong AWS.
+* Làm việc với CloudWatch (metrics, logs, alarms).
+* Tìm hiểu CloudTrail cho audit logging.
+* Hiểu AWS X-Ray cho distributed tracing.
+* Xây dựng hệ thống giám sát toàn diện.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+---
 
+### Nhiệm vụ trong tuần:
 
-### Kết quả đạt được tuần 8:
+| Ngày | Công việc | Ngày bắt đầu | Ngày kết thúc | Tài liệu |
+| --- | --------- | ------------ | ------------- | -------- |
+| Thứ 2 | - Giới thiệu Monitoring & Logging <br> - Tổng quan CloudWatch | 23/02/2026 | 23/02/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ 3 | - CloudWatch metrics <br> - Tạo alarms | 24/02/2026 | 24/02/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ 4 | - CloudTrail concepts <br> - Thiết lập audit logging | 25/02/2026 | 25/02/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ 5 | - AWS X-Ray overview <br> - Distributed tracing | 26/02/2026 | 26/02/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ 6 | - Tích hợp các dịch vụ monitoring <br> - Phân tích logs & traces | 27/02/2026 | 27/02/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thứ 7 | - **Thực hành:** Thiết lập hệ thống monitoring toàn diện <br> &emsp;+ CloudWatch dashboards & alarms <br> &emsp;+ CloudTrail logging <br> &emsp;+ X-Ray tracing | 28/02/2026 | 28/02/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Kết quả tuần 8:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu rõ hệ thống **monitoring và logging** trong AWS.
+* Cấu hình được **CloudWatch metrics, logs và alarms**.
+* Triển khai **CloudTrail để audit và theo dõi hệ thống**.
+* Sử dụng **AWS X-Ray để theo dõi distributed tracing**.
+* Xây dựng thành công hệ thống **monitoring toàn diện** bao gồm:
+  * CloudWatch
+  * CloudTrail
+  * X-Ray
