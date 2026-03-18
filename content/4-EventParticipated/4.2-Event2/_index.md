@@ -13,8 +13,8 @@ pre: "<b>4.2.</b> "
 | Item | Details |
 | --- | --- |
 | **Event Name** | AI Agents, Prompt Engineering, and AIoT Projects on AWS |
-| **Date & Time** | [Update as needed] |
-| **Location** | [Update as needed] |
+| **Date & Time** | 14/03/2026 |
+| **Location** | floor 26 Bitexco Tower |
 | **Role** | Attendee (FCJ Cloud Intern) |
 
 ## Event Objectives
