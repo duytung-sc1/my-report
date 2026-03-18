@@ -1,126 +1,70 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Participated Event 2"
+date: 2026-01-01
+weight: 2
 chapter: false
-pre: " <b> 4.2. </b> "
+pre: "<b>2.2.</b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# AI Agents, Prompt Engineering, and AIoT Projects on AWS
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+## Event Information
 
-### Event Objectives
+| Item | Details |
+| --- | --- |
+| **Event Name** | AI Agents, Prompt Engineering, and AIoT Projects on AWS |
+| **Date & Time** | [Update as needed] |
+| **Location** | [Update as needed] |
+| **Role** | Attendee (FCJ Cloud Intern) |
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+## Event Objectives
+- Understand the core concepts behind AI Agents and how they extend the capabilities of standalone LLMs.
+- Learn how prompt engineering improves output quality, consistency, and cost efficiency when working with large language models.
+- Explore practical AIoT project architectures that combine edge devices, AWS cloud services, and AI capabilities.
+- Gain ideas that can be applied to real-world cloud and AI projects.
 
-### Speakers
+## Speakers
+- **Banh Cam Vinh** – Topic: Building AI Agents with Strands :contentReference[oaicite:3]{index=3}
+- **Nguyen Tuan Thinh** – DevOps Engineer, First Cloud AI Journey  
+  Topic: Automated Prompt Engineering: Enhancing LLM Output Quality :contentReference[oaicite:4]{index=4}
+- **Aiden Dinh** – Operation Engineer, Katalon  
+  Topic: AIoT Projects :contentReference[oaicite:5]{index=5}
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+## Key Highlights
 
-### Key Highlights
+### Session 1: Building AI Agents with Strands
+This session introduced the limitations of standalone LLMs and explained why AI agents are needed in modern systems. Instead of only generating text, AI agents can perform multi-step reasoning, use tools, access external services, and make context-aware decisions. The presentation also explained the workflow of **Strands Agents**, including built-in tools, tool calling, system prompts, and knowledge base support. A live build/demo helped illustrate how agents can be created more efficiently with Strands compared to manual orchestration. :contentReference[oaicite:6]{index=6}
 
-#### Identifying the drawbacks of legacy application architecture
+### Session 2: Prompt Engineering and Prompt Optimization
+This session focused on how better prompts lead to better AI results. Key ideas included the importance of clarity, role definition, instruction quality, output formatting, constraints, and examples. The speaker also highlighted common prompt engineering principles such as being specific, separating sections clearly, avoiding ambiguity, and allowing the model to admit uncertainty when needed. In addition, the presentation covered token economics and the impact of prompt quality on usage cost. Advanced techniques such as Chain-of-Thought, Tree-of-Thoughts, RAG, and role prompting were also introduced, together with a browser extension called **Proptimizer** for automated prompt optimization. :contentReference[oaicite:7]{index=7}
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+### Session 3: AIoT Projects and Real-World Architecture
+The AIoT session presented a practical **Locker Management** project built with hardware devices and AWS services. The goal was to automate club locker usage, reduce manual processes, and improve asset tracking. The system used devices such as Raspberry Pi, Arduino, reed switch sensors, RFID card readers, LCD displays, and a camera. On the AWS side, services such as **AWS IoT Core**, **Lambda**, **DynamoDB**, **S3**, **Amplify**, and **Rekognition** were used to connect devices, store data, detect locker events, and perform face recognition. An additional project, **Plutus: Financial Budget App**, was also introduced as another example of applied system design. :contentReference[oaicite:8]{index=8}
 
-#### Transitioning to modern application architecture – Microservices
+## Key Takeaways
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+### AI Is Moving Toward Agents
+One of the most important messages from the event was that AI systems are moving beyond simple prompting. Agents represent a more advanced model where AI can reason through steps, call tools, retrieve information, and act with greater autonomy. This makes them more suitable for real-world workflows that require integration, decision-making, and task execution. :contentReference[oaicite:9]{index=9}
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+### Prompt Quality Directly Affects Results
+The prompt engineering session made it clear that prompt design is not just a writing skill, but a technical skill that directly affects output quality, consistency, and cost. A good prompt includes role, task, context, input, expected format, and constraints. Better prompts reduce wasted tokens and improve the reliability of AI-generated outputs. :contentReference[oaicite:10]{index=10}
 
-#### Domain-Driven Design (DDD)
+### AWS Enables Practical AI and IoT Integration
+The AIoT project showed how AWS services can be combined with edge hardware to create intelligent, automated systems. AWS IoT Core enabled secure device communication, while Lambda, DynamoDB, S3, and Rekognition handled event processing, storage, and identity recognition. This demonstrated how cloud services can support scalable and practical AIoT solutions. :contentReference[oaicite:11]{index=11}
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+## Applying the Event Knowledge to Work
 
-#### Event-Driven Architecture
+### Applying AI Agents
+The Strands Agent session provided useful ideas for building workflow-oriented AI features. In future project work, agents could be used for tasks such as log analysis, multi-step report generation, or automated internal support workflows where the system needs to combine reasoning and tool usage. :contentReference[oaicite:12]{index=12}
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+### Improving AI Output Through Better Prompting
+The prompt engineering session can be applied immediately to any project that uses LLMs. By designing prompts more clearly and systematically, it becomes easier to improve response quality, reduce ambiguity, and optimize token usage. This is especially useful for AI-assisted reporting, summarization, and automation features. :contentReference[oaicite:13]{index=13}
 
-#### Compute Evolution
+### Learning from Real-World Cloud Architecture
+The AIoT project offered a practical example of how AWS services can be combined into a real system involving sensors, identity recognition, cloud messaging, and web monitoring. This helped strengthen understanding of how to connect hardware, backend logic, storage, and AI services into one complete architecture. :contentReference[oaicite:14]{index=14}
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+## Event Experience
+This event was valuable because it connected foundational AI concepts with practical implementation. The progression from AI agents, to prompt engineering, to applied AIoT architecture made the learning experience both broad and concrete. Instead of focusing only on theory, the sessions showed how AWS services and AI techniques can be used together in realistic systems. The event also helped reinforce the idea that modern cloud projects increasingly require a combination of AI capability, system design, and operational thinking. :contentReference[oaicite:15]{index=15} :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17}
 
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+## Overall Reflection
+Overall, this event expanded my understanding in three important areas: AI agents, prompt engineering, and practical AIoT system design. It showed that building effective AI systems is not only about using a model, but also about designing workflows, structuring prompts well, and integrating the right AWS services. The sessions provided both conceptual clarity and practical inspiration that can be applied to future cloud and AI projects. :contentReference[oaicite:18]{index=18} :contentReference[oaicite:19]{index=19} :contentReference[oaicite:20]{index=20}
