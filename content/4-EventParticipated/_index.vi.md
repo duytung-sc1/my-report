@@ -1,29 +1,21 @@
 ---
-title: "Các events đã tham gia"
+title: "Các sự kiện đã tham gia"
 date: 2024-01-01
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
+### [Sự kiện 1](3.1-Event1/)
+&emsp;**Tên sự kiện:** AWS re:Invent 2025 Recap (Vietnam)  
+&emsp;**Thời gian:** January 27, 2026  
+&emsp;**Địa điểm:** AWS Vietnam Office (Tầng 26 & 36), Thành phố Hồ Chí Minh  
+&emsp;**Vai trò:** Người tham dự (FCJ Cloud Intern)
 
-### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+---
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
-
-
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
-
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
+### [Sự kiện 2](3.2-Event2/)
+&emsp;**Tên sự kiện:** AI Agents, Prompt Engineering, and AIoT Projects on AWS  
+&emsp;**Thời gian:** March 14, 2026  
+&emsp;**Địa điểm:** AWS Vietnam Office (Tầng 26), Thành phố Hồ Chí Minh  
+&emsp;**Vai trò:** Người tham dự (FCJ Cloud Intern)
