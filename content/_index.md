@@ -21,15 +21,13 @@ chapter: false
 
 &emsp; **Major:** Information Assurance
 
-&emsp; **Class:** AWS082025
-
-&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+&emsp; **Internship Company:** Bootcamp - First Cloud AI Journey @ AWS Study Group.
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 5/01/2026 to na/na/2026
+&emsp; **Internship Duration:** From 05/01/2026 to 18/04/2026
 
-<img src="/images/avatar.jpg" width="150" style="border-radius: 14px;">
+<img src="/images/hinhnen.jpg" width="150" style="border-radius: 14px;">
 
 ### Report Content
 
