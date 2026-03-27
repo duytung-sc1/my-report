@@ -142,7 +142,7 @@ The **IrisAuth** system is deployed using a pure **serverless** model on AWS, en
 - Email invitations are sent via **Amazon SES** with templates stored on SES.
 - All Lambda logs are automatically streamed to **CloudWatch Logs**; **CloudWatch Alarms** trigger when error rates spike.
 - WebSocket connections (execute endpoint) go through **API Gateway WebSocket API**, routed to a Lambda handler.
-
+(/images/2-Proposal/kientruc.png)
 ## 4.3. Authentication System (Self-built, No external JWT libraries)
 
 The system does not rely on external JWT libraries.
