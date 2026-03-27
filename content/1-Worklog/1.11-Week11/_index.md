@@ -1,7 +1,7 @@
 ---
 title: "Week 11 Worklog"
 date: 2026-03-16
-weight: 1
+weight: 10
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
@@ -20,13 +20,12 @@ pre: " <b> 1.11. </b> "
 
 | Day | Tasks | Start Date | End Date | Resources |
 | --- | ----- | ---------- | -------- | --------- |
-| Mon | - Introduction to AWS Security <br> - AWS WAF overview | 16/03/2026 | 16/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Tue | - AWS Shield concepts <br> - DDoS protection | 17/03/2026 | 17/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Wed | - Secrets Manager <br> - Manage credentials securely | 18/03/2026 | 18/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thu | - AWS Certificate Manager <br> - SSL/TLS certificates | 19/03/2026 | 19/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Fri | - Security best practices <br> - Harden infrastructure | 20/03/2026 | 20/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Sat | - **Hands-on:** Secure production environment <br> &emsp;+ WAF rules <br> &emsp;+ Secrets management <br> &emsp;+ HTTPS setup with ACM | 21/03/2026 | 21/03/2026 | https://cloudjourney.awsstudygroup.com/ |
-
+| Mon | - Introduction to AWS Security <br> - AWS WAF overview | 30/03/2026 | 30/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Tue | - AWS Shield concepts <br> - DDoS protection | 31/03/2026 | 31/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Secrets Manager <br> - Manage credentials securely | 01/04/2026 | 01/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - AWS Certificate Manager <br> - SSL/TLS certificates | 02/04/2026 | 02/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Security best practices <br> - Harden infrastructure | 03/04/2026 | 03/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Sat | - **Hands-on:** Secure production environment <br> &emsp;+ WAF rules <br> &emsp;+ Secrets management <br> &emsp;+ HTTPS setup with ACM | 04/04/2026 | 04/04/2026 | https://cloudjourney.awsstudygroup.com/ |
 ---
 
 ### Week 11 Results:
