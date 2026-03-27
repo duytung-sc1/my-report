@@ -1,19 +1,18 @@
 ---
 title : "Giới thiệu"
-date : 2024-01-01 
+date : 2026-03-27
 weight : 1
 chapter : false
-pre : " <b> 5.1. </b> "
+pre : " <b> 4.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Thành phần Serverless
++ **Dịch vụ Serverless** là các tài nguyên được AWS quản lý hoàn toàn, tự động mở rộng, có tính sẵn sàng cao và không yêu cầu quản lý hạ tầng. Chúng cho phép bạn tập trung vào logic ứng dụng mà không cần lo lắng về việc vận hành hay khởi tạo máy chủ.
++ Trong kiến trúc này, **Amazon S3** cung cấp khả năng lưu trữ an toàn, **Amazon CloudFront** đóng vai trò là điểm truy cập toàn cầu và lớp bảo mật, còn **AWS Lambda** thực hiện các tác vụ tính toán theo yêu cầu.
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
-
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+#### Tổng quan Workshop
+Trong workshop này, bạn sẽ triển khai một môi trường serverless hoàn toàn (100% serverless).
++ **"Lớp Frontend"** bao gồm một **S3 bucket** chứa các tệp web tĩnh. Để đảm bảo an toàn, bucket này được giữ ở chế độ riêng tư (private) và chỉ cấp quyền truy cập thông qua CloudFront bằng tính năng **Origin Access Control (OAC)**.
++ **"Lớp Backend"** sử dụng **AWS Lambda** để thực thi logic đánh giá bảo mật. Hàm được kích hoạt thông qua **Lambda Function URL**, cho phép frontend giao tiếp an toàn với backend thông qua CloudFront. Cấu hình này mô phỏng một ứng dụng web thực tế nơi backend được bảo vệ khỏi các kết nối trực tiếp từ internet công cộng.
 
 ![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
