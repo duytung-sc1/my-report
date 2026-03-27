@@ -1,7 +1,7 @@
 ---
 title: "Week 8 Worklog"
 date: 2026-02-23
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
@@ -20,13 +20,12 @@ pre: " <b> 1.8. </b> "
 
 | Day | Tasks | Start Date | End Date | Resources |
 | --- | ----- | ---------- | -------- | --------- |
-| Mon | - Introduction to Monitoring & Logging <br> - CloudWatch overview | 23/02/2026 | 23/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Tue | - CloudWatch metrics <br> - Create alarms | 24/02/2026 | 24/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Wed | - CloudTrail concepts <br> - Audit logging setup | 25/02/2026 | 25/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Thu | - AWS X-Ray overview <br> - Distributed tracing | 26/02/2026 | 26/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Fri | - Integrate monitoring services <br> - Analyze logs & traces | 27/02/2026 | 27/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-| Sat | - **Hands-on:** Comprehensive monitoring setup <br> &emsp;+ CloudWatch dashboards & alarms <br> &emsp;+ CloudTrail logging <br> &emsp;+ X-Ray tracing | 28/02/2026 | 28/02/2026 | https://cloudjourney.awsstudygroup.com/ |
-
+| Mon | - Introduction to Monitoring & Logging <br> - CloudWatch overview | 09/03/2026 | 09/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Tue | - CloudWatch metrics <br> - Create alarms | 10/03/2026 | 10/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - CloudTrail concepts <br> - Audit logging setup | 11/03/2026 | 11/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - AWS X-Ray overview <br> - Distributed tracing | 12/03/2026 | 12/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Integrate monitoring services <br> - Analyze logs & traces | 13/03/2026 | 13/03/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Sat | - **Hands-on:** Comprehensive monitoring setup <br> &emsp;+ CloudWatch dashboards & alarms <br> &emsp;+ CloudTrail logging <br> &emsp;+ X-Ray tracing | 14/03/2026 | 14/03/2026 | https://cloudjourney.awsstudygroup.com/ |
 ---
 
 ### Week 8 Results:
