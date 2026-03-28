@@ -1,118 +1,108 @@
 ---
-title : "Mô phỏng On-premises DNS "
+title : "Vòng đời Triển khai"
 date : 2024-01-01
 weight : 4
 chapter : false
-pre : " <b> 5.4.4 </b> "
+pre : " <b> 4.4.4. </b> "
 ---
 
- AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.
+## Tự động hóa việc triển khai Storage Stack cho các bucket S3 mới.
 
-Trong phần này, bạn sẽ tạo một quy tắc chuyển tiếp (forwarding rule) để gửi các yêu cầu resolve DNS từ môi trường truyền thống (mô phỏng) đến Private Hosted Zone trên Route 53. Phần này tận dụng cơ sở hạ tầng do CloudFormation triển khai trong phần Chuẩn bị môi trường.
+Trong bài tích hợp này, chúng ta sẽ triển khai một mẫu (template) CloudFormation để đảm bảo File Storage Security tự động giám sát bất kỳ bucket S3 mới nào được tạo ra. Ngoài ra, bất cứ khi nào một tài nguyên bucket S3 bị xóa, mẫu này cũng sẽ tự động gỡ bỏ tất cả các tài nguyên bảo mật liên quan đã được triển khai để giám sát bucket đó.
 
-#### Tạo DNS Alias Records cho Interface endpoint
-1. Click link để đi đến [Route 53 management console](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1#) (Hosted Zones section).  Mẫu CloudFormation mà bạn triển khai trong phần Chuẩn bị môi trường đã tạo Private Hosted Zone này. Nhấp vào tên của Private Hosted Zone, s3.us-east-1.amazonaws.com:
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/6b36a2df-ea3f-402c-9921-025fec2c965d" />
 
-![hosted zone](/images/5-Workshop/5.4-S3-onprem/hosted-zone.png)
+---
 
-2. Tạo 1 record mới trong Private Hosted Zone:
+## Điều kiện tiên quyết
 
-![Create record](/images/5-Workshop/5.4-S3-onprem/create-record1.png)
+### 1. Lấy thông tin Region của tài khoản Cloud One.
+* Đăng nhập vào **Cloud One**.
+* Chọn **Account Settings**.
+* Sao chép lại thông tin **Region**: ví dụ `us-1`.
 
-+ Giữ nguyên Record name và record type
-+ Alias Button: click để enable
-+ Route traffic to: Alias to VPC Endpoint
-+ Region: US East (N. Virginia) [us-east-1]
-+ Chọn endpoint: Paste tên (Regional VPC Endpoint DNS) bạn đã lưu lại ở phần 4.3
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/58769d11-9a16-45fd-99bc-422f8b3c812d" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/574d2a10-cd42-4254-abd1-871c7c409896" />
 
-![record1](/images/5-Workshop/5.4-S3-onprem/record1.png)
+### 2. Tạo một API Key mới trong Cloud One.
+* Trong mục **Account Settings** của Cloud One, chọn **API Keys** từ menu bên trái.
+* Nhấp vào **New**.
+* **API Key Alias**: `immersion_day`
+* **Description**: (Tùy chọn).
+* **Role**: `Full Access`
+* **Language**: Ngôn ngữ ưu tiên của bạn.
+* **Timezone**: Múi giờ ưu tiên của bạn.
+* Nhấp **Next**.
+* **Sao chép API Key** của bạn và lưu trữ ở nơi an toàn.
 
-3. Click Add another record, và add 1 cái record thứ 2 sử dụng những thông số sau:
-+ Record name: *.
-+ Record type: giữ giá trị default (type A)
-+ Alias Button: Click để enable
-+ Route traffic to: Alias to VPC Endpoint
-+ Region: US East (N. Virginia) [us-east-1]
-+ Chọn endpoint: Paste tên (Regional VPC Endpoint DNS) bạn đã lưu lại ở phần 4.3
-+ Click **Create records** 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/c6fc1793-82df-4033-aab8-c98172dba78e" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/02e715fc-6bd0-4aa9-979a-8ae9fc69b238" />
 
-![record 2](/images/5-Workshop/5.4-S3-onprem/record2.png)
+### 3. Lấy tên của Scanner Stack và URL SQS của Scanner Stack.
+* Truy cập vào **AWS CloudFormation**.
+* Tìm và chọn **Scanner Stack** mà bạn đã triển khai.
+* Nhấp vào tab **Outputs**.
+* Sao chép tên của **Scanner Stack**.
+* Tìm khóa (key) có tên **ScannerQueueURL**.
+* Sao chép giá trị của **ScannerQueueURL**.
 
-Record mới xuất hiện trên giao diện Route 53.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/1ad88048-ccb5-4fe3-93e3-33c801f2f17e" />
 
-![result](/images/5-Workshop/5.4-S3-onprem/result.png)
+---
 
-#### Tạo một Resolver Forwarding Rule
+## Triển khai mẫu CloudFormation dưới đây
 
-**Route 53 Resolver Forwarding Rules** cho phép bạn chuyển tiếp các DNS queries từ VPC của bạn đến các nguồn khác để resolve name. Bên ngoài môi trường workshop, bạn có thể sử dụng tính năng này để chuyển tiếp các DNS queries từ VPC của bạn đến các máy chủ DNS chạy trên on-premises. Trong phần này, bạn sẽ mô phỏng một on-premises conditional forwarder bằng cách tạo một forwarding rule để chuyển tiếp các DNS queries for Amazon S3 đến một Private Hosted Zone chạy trong "VPC Cloud" để resolve PrivateLink interface endpoint regional DNS name.
+[Khởi tạo Stack (Launch Stack)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=c1fss-lifecycle-workshop&templateURL=https://aws-workshop-c1as-cft-templates.s3.amazonaws.com/fss-lifecycle.yml)
 
-1. Từ giao diện  **Route 53**, chọn **Inbound endpoints** trên thanh bên trái
+1. **Điền các tham số cần thiết vào mẫu với các giá trị đã sao chép trước đó:**
+   * **C1API**: Dán API Key Cloud One của bạn.
+   * **C1RegionEndpoint**: Dán Region của tài khoản Cloud One.
+   * **SQSURL**: Dán giá trị URL SQS từ Scanner Stack.
+   * **StackName**: Dán tên của Scanner Stack đã triển khai.
+   * Nhấp **Next**.
+   * (Tùy chọn) - Cấu hình thẻ (tags) nếu muốn.
+   * Nhấp **Next**.
+   * Tích vào ô xác nhận ở dưới cùng để chấp nhận việc tạo tài nguyên IAM (**acknowledge IAM resource creation**).
+   * Nhấp **Create Stack**.
 
-2. Trong giao diện **Inbound endpoint**, Chọn ID của Inbound endpoint.
+LaunchStack()
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/bcb59452-6bdc-42e9-a3e3-b97e2e4404cd" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/fe888208-87fa-4fb9-975d-6fed593a6a68" />
 
-![Inbound endpoint](/images/5-Workshop/5.4-S3-onprem/route53-1.png)
+2. **Theo dõi quá trình triển khai stack** cho đến khi đạt trạng thái: **CREATE_COMPLETE**.
 
-3. Sao chép 2 địa chỉ IP trong danh sách vào trình chỉnh sửa.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/3b537097-0eca-45bf-bad4-f0ae2919a2db" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/8d93a959-63cb-477e-b920-c9b107397ad6" />
 
-![Ip addresses](/images/5-Workshop/5.4-S3-onprem/route53-2.png)
+---
 
-4. Từ giao diện Route 53, chọn  **Resolver** > **Rules** và chọn **Create rule**
+## Kiểm tra tính năng tự động hóa
 
-![Ip addresses](/images/5-Workshop/5.4-S3-onprem/route53-3.png)
+### Tạo một bucket S3 mới
+> [NHẤP VÀO ĐÂY](https://aws.amazon.com/video/watch/5c76e13b7fe/) - Hướng dẫn từng bước để tạo một S3 bucket.
 
-5. Trong giao diện **Create rule**
+---
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/378851dc-a6dc-4450-8ac2-78dc65a4031c" />
 
-+ Name: myS3Rule
-+ Rule type: Forward
-+ Domain name: s3.us-east-1.amazonaws.com
+### Xác minh và Dọn dẹp
 
-![create rule](/images/5-Workshop/5.4-S3-onprem/route53-4.png)
+1. **Theo dõi CloudFormation**: Sau khi bucket S3 được tạo, hãy kiểm tra CloudFormation để thấy Storage stack mới đang được triển khai tự động. Đợi cho đến khi stack đạt trạng thái **CREATE_COMPLETE**.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/91866103-4289-4d85-841d-3a716ad12e17" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/0f858c97-be8d-4eab-a822-26db7fddb59c" />
 
-+ VPC: VPC On-prem
-+ Outbound endpoint: VPCOnpremOutboundEndpoint
+2. **Kiểm tra Cloud One**: Khi stack hoàn tất triển khai, hãy kiểm tra bảng điều khiển Cloud One File Storage để xác nhận bucket mới đã nằm trong danh sách được giám sát.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/6dfb554a-938e-43e7-8431-cc8e9c348d83" />
 
-![create rule](/images/5-Workshop/5.4-S3-onprem/route53-5.png)
+3. **Xóa bucket S3**:
+   * Trong giao diện AWS, đi tới **S3**.
+   * Tìm và chọn bucket bạn vừa tạo ở bước trên.
+   * Nhấp **Delete**.
+   * Xác nhận việc xóa bằng cách nhập/dán tên bucket và nhấp **Delete bucket**.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/15e78b50-005e-4618-882e-285148120ee0" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/6f2a2e85-fe2b-4272-b912-830f06fdaad7" />
 
-+ Target IP Addresses: điền cả hai IP bạn đã lưu trữ trên trình soạn thảo (inbound endpoint addresses) và sau đó chọn **Submit**
+4. **Theo dõi việc gỡ bỏ**: Kiểm tra **CloudFormation** để thấy stack tương ứng đang được tự động gỡ bỏ.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/deed64a2-786f-47e4-baa8-06734c262211" />
 
-![create rule](/images/5-Workshop/5.4-S3-onprem/route53-6.png)
-
-Bạn đã tạo thành công resolver forwarding rule. 
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/route53-7.png)
-
-#### Kiểm tra on-premises DNS mô phỏng.
-
-1. Kết nối đến **Test-Interface-Endpoint EC2 instance** với **Session Manager**
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/test1.png)
-
-2. Kiểm tra DNS resolution. Lệnh dig sẽ trả về địa chỉ IP được gán cho VPC endpoint interface đang chạy trên VPC (địa chỉ IP của bạn sẽ khác):
-
-```
-dig +short s3.us-east-1.amazonaws.com 
-```
-{{% notice note %}}
-Các địa chỉ IP được trả về là các địa chỉ IP VPC enpoint, KHÔNG phải là các địa chỉ IP Resolver mà bạn đã dán từ trình chỉnh sửa văn bản của mình. Các địa chỉ IP của  Resolver endpoint  và  VPC endpoin trông giống nhau vì chúng đều từ khối CIDR VPC Cloud.
-{{% /notice %}}
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/dig.png)
-
-3. Truy cập vào menu VPC (phần Endpoints), chọn S3 interface endpoint. Nhấp vào tab Subnets và xác nhận rằng các địa chỉ IP được trả về bởi lệnh Dig khớp với VPC endpoint:
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/subnet.png)
-
-4. Hãy quay lại shell của bạn và sử dụng AWS CLI để kiểm tra danh sách các bucket S3 của bạn:
-
-```
-aws s3 ls --endpoint-url https://s3.us-east-1.amazonaws.com
-```
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/endpoint.png)
-
-5. Kết thúc phiên làm việc của Session Manager của bạn:
-
-![create rule](/images/5-Workshop/5.4-S3-onprem/terminal.png)
-
-
-Trong phần này, bạn đã tạo một  **Interface Endpoint**  cho Amazon S3. Điểm cuối này có thể được truy cập từ on-premises thông qua Site-to-Site VPN hoặc AWS Direct Connect. Các điểm cuối Route 53 Resolver outbound giả lập chuyển tiếp các yêu cầu DNS từ on-premises đến một Private Hosted Zone đang chạy trên đám mây. Các điểm cuối Route 53 inbound nhận yêu cầu giải quyết và trả về một phản hồi chứa địa chỉ IP của  **Interface Endpoint**  VPC. Sử dụng DNS để giải quyết các địa chỉ IP của điểm cuối cung cấp tính sẵn sàng cao trong trường hợp một Availability Zone gặp sự cố.
+5. **Kiểm tra cuối cùng**: Sau khi stack bị xóa, hãy kiểm tra lại bảng điều khiển Cloud One File Storage để xác nhận bucket không còn nằm trong danh sách giám sát.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/fc91869b-ea2a-4eb9-942a-492760cb2d98" />
