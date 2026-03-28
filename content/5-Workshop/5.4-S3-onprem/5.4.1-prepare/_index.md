@@ -1,7 +1,7 @@
-<img width="1179" height="753" alt="image" src="https://github.com/user-attachments/assets/60b63455-4494-4369-80a1-470f4d56d416" />---
+
 title : "Visibility with CloudWatch"
 date : 2024-01-01
-weight : 
+weight : 1
 chapter : false
 pre : " <b> 4.4.1 </b> "
 ---
