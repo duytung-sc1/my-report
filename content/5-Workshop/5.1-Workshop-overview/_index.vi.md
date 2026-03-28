@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 4.1. </b> "
 ---
 
-# GIỚI THIỆU
+
 
 ## Lưu trữ đối tượng trên Cloud (Amazon S3)
 
