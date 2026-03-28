@@ -6,7 +6,6 @@ chapter : false
 pre : " <b> 4.3.1 </b> "
 ---
 
-# Testing your Deployment
 
 ## Generating your First Detection
 
