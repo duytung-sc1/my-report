@@ -1,57 +1,79 @@
----
-title : "Prepare the environment"
+<img width="1179" height="753" alt="image" src="https://github.com/user-attachments/assets/60b63455-4494-4369-80a1-470f4d56d416" />---
+title : "Visibility with CloudWatch"
 date : 2024-01-01
-weight : 1
+weight : 
 chapter : false
-pre : " <b> 5.4.1 </b> "
+pre : " <b> 4.4.1 </b> "
 ---
 
-To prepare for this part of the workshop you will need to:
-+ Deploying a CloudFormation stack 
-+ Modifying a VPC route table. 
+## Monitoring your Scans with CloudWatch
 
-These components work together to simulate on-premises DNS forwarding and name resolution.
+File Storage Security logs are in AWS CloudWatch Logs. These logs contain a bit more information than what’s available in the `fss-*` tags.
 
-#### Deploy the CloudFormation stack
+1. To view the scan result logs in AWS CloudWatch Logs, go to your AWS account, in **CloudFormation > select your scanner stack > Resources > ScannerLogGroup** link.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/788ccafc-edec-4d7f-9925-a75263fa025d" />
 
-The CloudFormation template will create additional services to support an on-premises simulation:
-+ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3 endpoint
-+ One Route 53 Inbound Resolver endpoint that enables "VPC Cloud" to resolve inbound DNS resolution requests to the Private Hosted Zone
-+ One Route 53 Outbound Resolver endpoint that enables "VPC On-prem" to forward DNS requests for S3 to "VPC Cloud"
+2. The AWS CloudWatch service appears with Log groups selected on the left. Under Log streams, click on a log stream with a latest event time that is later than or equal to the time when you added the file to the Amazon S3 bucket to scan and expand the event message that starts with scanner result.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/83aa5aff-7a72-4641-94c3-da8b32fcdd04" />
 
-![route 53 diagram](/images/5-Workshop/5.4-S3-onprem/route53.png)
+3. Log event will show up and you will see JSON code block appears containing information about the scan and some additional details about the Lambda Scanner. Add to the **Filter Events**: `scanner result`
 
-1. Click the following link to open the [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). The required template will be pre-loaded into the menu. Accept all default and click Create stack.
+Now you will see the security events based in the File Storage Security Scanner, like:
+* **timestamp**: A unique number that corresponds to the time when the scan occurred.
+* **sqs-message-id**: The unique ID of this event.
+* **file_url**: The URL to the scanned file in Amazon S3.
+* **scanner_status** and **scanner_status_message**
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/f7d6d54f-86bb-4242-936f-1d9aff249540" />
 
-![Create stack](/images/5-Workshop/5.4-S3-onprem/create-stack.png)
+The `scanner_status` has the following values:
+* **0: “successful scan”**: Indicates that the scan finished successfully.
+* **-1: “invalid license status”**: Usually indicates that File Storage Security is not fully configured. The most likely reason for an incomplete configuration is that ARNs have not been submitted through the File Storage Security console or API yet. For instructions on submitting the ARNs, see Add Stacks or Deploy stacks using the API. This message could also indicate that your license is not valid, or that File Storage Security was not able to push a new license to your stack.
+* **-2: “unsuccessful scan”**: Indicates that the ScannerLambda function was unable to scan the file.
+* **-3: “scanner error”**: Indicates that an internal error occurred in the ScannerLambda function.
+* **-4: “unsuccessful scanner invocation”**: Indicates that the ScannerLambda function couldn’t finish the scan. Either the scan timeout was reached, or there were too many files to scan causing a Lambda throttling error. 
+* **scanning_result**: Indicates scan details such as the scanned file’s size as well as any found malware or errors.
 
-![Button](/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
+---
 
-It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.
+## Additional Query using CloudWatch
 
-#### Update on-premise private route table
+1. You can search for scan results using AWS CloudWatch Logs Insights. Here is an example on how to set up a query:
+   * In AWS, go to the **CloudWatch** service.
+   * On the left, under Logs, click **Logs Insights**.
+   * In the main pane, click inside the **Select log group(s)** field, and enter `ScannerLambda`.
+   * Select the Log Group that only contains “ScannerLambda” together like the example below.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/f5f4bf5d-e9aa-4b51-babe-e14004690c52" />
+2. Replace the contents of the text box with the following lines and click in **Run Query**:
+   ```text
+   fields @timestamp, @message
+   | filter @message like "scanner result"
+   | sort @timestamp desc
+   | limit 20
+3. You should be able to see the events that you generated:
+   <img width="1766" height="786" alt="image" src="https://github.com/user-attachments/assets/8ed3805a-16b1-4157-9d2d-dc5a13c24749" />
+4. By expanding the details of the event, you will be able to see the event detail generated by File Storage Security in a JSON format:
 
-This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the "VPC On-prem" routing table to direct traffic destined for the cloud to the strongSwan VPN instance.
-
-1. Open the Amazon EC2 console 
-
-2. Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor
-
-![ec2 id](/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
-
-3. Navigate to the VPC menu by using the Search box at the top of the browser window.
-
-4. Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.
-
-![rt](/images/5-Workshop/5.4-S3-onprem/rt.png)
-
-5. Click Add route.
-+ Destination: your Cloud VPC cidr range
-+ Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)
-
-![add route](/images/5-Workshop/5.4-S3-onprem/add-route.png)
-
-6. Click Save changes
-
-
-
+   ```json
+   {
+      "scanner result":{
+         "timestamp":1630102559.6158442,
+         "sqs_message_id":"abcf8e38-7a53-4880-9547-6418a4e1d018",
+         "xamz_request_id":"",
+         "file_url":"[https://modernization-workshop-devdays-fernando.s3.amazonaws.com/eicarcom2.zip](https://modernization-workshop-devdays-fernando.s3.amazonaws.com/eicarcom2.zip)",
+         "scanner_status":0,
+         "scanner_status_message":"successful scan",
+         "scanning_result":{
+            "TotalBytesOfFile":308,
+            "Findings":[
+               {
+                  "malware":"Eicar_test_file",
+                  "type":"Virus"
+               }
+            ],
+            "Error":"",
+            "Codes":[
+               
+            ]
+         }
+      }
+   }
