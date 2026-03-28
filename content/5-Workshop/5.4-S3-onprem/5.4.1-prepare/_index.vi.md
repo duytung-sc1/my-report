@@ -1,7 +1,7 @@
 ---
 title : "Khả năng Hiển thị với CloudWatch"
 date : 2024-01-01
-weight : 
+weight : 2
 chapter : false
 pre : " <b> 4.4.1 </b> "
 ---
