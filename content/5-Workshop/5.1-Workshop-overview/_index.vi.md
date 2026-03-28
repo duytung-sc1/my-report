@@ -6,13 +6,26 @@ chapter : false
 pre : " <b> 4.1. </b> "
 ---
 
-#### Thành phần Serverless
-+ **Dịch vụ Serverless** là các tài nguyên được AWS quản lý hoàn toàn, tự động mở rộng, có tính sẵn sàng cao và không yêu cầu quản lý hạ tầng. Chúng cho phép bạn tập trung vào logic ứng dụng mà không cần lo lắng về việc vận hành hay khởi tạo máy chủ.
-+ Trong kiến trúc này, **Amazon S3** cung cấp khả năng lưu trữ an toàn, **Amazon CloudFront** đóng vai trò là điểm truy cập toàn cầu và lớp bảo mật, còn **AWS Lambda** thực hiện các tác vụ tính toán theo yêu cầu.
+# GIỚI THIỆU
 
-#### Tổng quan Workshop
-Trong workshop này, bạn sẽ triển khai một môi trường serverless hoàn toàn (100% serverless).
-+ **"Lớp Frontend"** bao gồm một **S3 bucket** chứa các tệp web tĩnh. Để đảm bảo an toàn, bucket này được giữ ở chế độ riêng tư (private) và chỉ cấp quyền truy cập thông qua CloudFront bằng tính năng **Origin Access Control (OAC)**.
-+ **"Lớp Backend"** sử dụng **AWS Lambda** để thực thi logic đánh giá bảo mật. Hàm được kích hoạt thông qua **Lambda Function URL**, cho phép frontend giao tiếp an toàn với backend thông qua CloudFront. Cấu hình này mô phỏng một ứng dụng web thực tế nơi backend được bảo vệ khỏi các kết nối trực tiếp từ internet công cộng.
+## Lưu trữ đối tượng trên Cloud (Amazon S3)
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+Vào tháng 3 năm 2006, khi Amazon Simple Storage Service (Amazon S3) được ra mắt và trở thành dịch vụ AWS đầu tiên được cung cấp rộng rãi, nhu cầu lưu trữ và sử dụng dữ liệu đã bùng nổ và làm thay đổi thế giới.
+
+Amazon S3 cung cấp khả năng mở rộng gần như vô hạn, cùng với độ sẵn sàng, độ bền, bảo mật và hiệu năng vượt trội. Khách hàng thuộc mọi quy mô và ngành nghề có thể sử dụng Amazon S3 để lưu trữ bất kỳ lượng dữ liệu nào cho nhiều mục đích khác nhau như data lake, website, ứng dụng di động, sao lưu và khôi phục, lưu trữ dài hạn và phân tích dữ liệu lớn.
+
+Amazon S3 cung cấp các tính năng quản lý dễ sử dụng giúp bạn tổ chức dữ liệu và cấu hình quyền truy cập chi tiết, phù hợp với nhu cầu kinh doanh, tổ chức và tuân thủ.
+
+---
+[Giới thiệu về Amazon Simple Storage Service (S3)](https://youtu.be/77lMCiiMilo?si=TMw7WY4S_sLfCTEd)
+---
+
+## Gia tăng việc áp dụng lưu trữ Cloud-Native
+
+Lưu trữ trên cloud là một thành phần quan trọng trong việc xây dựng ứng dụng cloud-native hiện nay, vì nó ảnh hưởng đến hiệu năng, chi phí, khả năng mở rộng, tính sẵn sàng, khả năng quản lý, độ bền và bảo mật.
+
+Với sự phát triển của các ứng dụng cloud-native và tầm quan trọng của việc tải lên và truyền file, các dịch vụ lưu trữ file trở thành lựa chọn hợp lý cho nhu cầu của doanh nghiệp hiện đại.
+
+Với tốc độ phát triển của DevOps và sự gia tăng của các đội phát triển nội bộ, nhiều kỹ sư bảo mật không thể theo sát hoặc nhận thức đầy đủ về tất cả các lỗ hổng bảo mật có thể tồn tại trong hệ thống của họ. Điều này dẫn đến việc thiếu thông tin và nguồn lực để giám sát sự phát triển và mở rộng của hệ thống lưu trữ trong các môi trường phát triển.
+
+Áp lực này đòi hỏi sự chú ý và các cơ chế kiểm soát (guardrails) để giúp tổ chức tránh rủi ro bảo mật và các sự cố vi phạm.
