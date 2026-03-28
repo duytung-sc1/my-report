@@ -1,29 +1,59 @@
 ---
-title: "Workshop"
-date: 2024-01-01
-weight: 4
-chapter: false
-pre: " <b> 4. </b> "
+title : "WORKSHOP"
+date : 2026-03-27
+weight : 1
+chapter : false
+pre : " <b> 4. </b> "
 ---
 
-# Nền tảng Đánh giá Bảo mật Website Serverless
+# AWS S3 BUCKET MALWARE SCANNING WITH TREND MICRO
 
-#### Tổng quan
+---
 
-**Kiến trúc Serverless trên AWS** cung cấp giải pháp để xây dựng và vận hành các ứng dụng mà không cần quản lý hạ tầng máy chủ. Mô hình này cho phép bạn tập trung hoàn toàn vào mã nguồn và logic nghiệp vụ, đồng thời tự động tối ưu hóa tính sẵn sàng cao và chi phí.
+## Welcome
 
-Trong bài lab này, bạn sẽ học cách xây dựng, triển khai và kiểm thử một ứng dụng web serverless hoàn chỉnh, có chức năng thực hiện các đánh giá an toàn thông tin cơ bản đối với các URL mục tiêu.
+Chào mừng bạn đến với workshop thực hành **AWS S3 Bucket Malware Scanning with Trend Micro**.
 
-Bạn sẽ sử dụng ba dịch vụ lõi của AWS để tạo ra nền tảng bảo mật và có khả năng mở rộng này: Amazon S3, Amazon CloudFront và AWS Lambda. Ba dịch vụ này kết hợp chặt chẽ với nhau để cung cấp một giao diện frontend an toàn và một bộ máy xử lý backend linh hoạt:
+Trong workshop này, bạn sẽ học cách quét các object được tải lên Amazon S3 buckets để phát hiện mã độc và tích hợp việc quét vào các workflow tùy chỉnh của bạn thông qua tự động hóa với các tài nguyên sẵn có trong môi trường AWS.
 
-+ **Amazon S3** - Đóng vai trò là nơi lưu trữ an toàn cho các tệp giao diện web tĩnh (HTML, CSS, JS). Quyền truy cập vào bucket này được thiết lập hạn chế tuyệt đối, chỉ cho phép phân phối nội dung thông qua hệ thống CDN.
-+ **Amazon CloudFront** - Đóng vai trò là Mạng phân phối nội dung (CDN). Dịch vụ này cung cấp mã hóa đường truyền HTTPS, bộ nhớ đệm toàn cầu và phân phối an toàn frontend từ S3 đến người dùng cuối thông qua tính năng Origin Access Control (OAC), giúp ngăn chặn mọi truy cập trực tiếp từ Internet.
-+ **AWS Lambda** - Hoạt động như bộ máy xử lý tính toán backend. Dịch vụ này tiếp nhận các yêu cầu đánh giá từ frontend, thực thi đoạn mã logic quét bảo mật và trả về kết quả quét.
-#### Nội dung
+Sử dụng Trend Micro Cloud One cùng với AWS S3, AWS Lambda, AWS SQS, AWS SNS và AWS CloudFormation, bạn sẽ có trải nghiệm thực hành trong việc triển khai một hệ thống bảo mật tự động nhằm cung cấp khả năng bảo vệ dữ liệu cho các bucket Amazon S3.
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+---
+
+## Trend Micro là ai?
+
+Trend Micro là một trong những công ty hàng đầu thế giới về an ninh mạng, giúp đảm bảo an toàn cho việc trao đổi thông tin số.
+
+Với hơn 30 năm kinh nghiệm trong lĩnh vực bảo mật, nghiên cứu mối đe dọa toàn cầu và đổi mới liên tục, Trend Micro giúp nâng cao khả năng chống chịu cho doanh nghiệp, chính phủ và người dùng cá nhân. Bảo mật là trọng tâm cốt lõi của họ, được thể hiện qua các giải pháp luôn theo kịp những mối đe dọa ngày càng phức tạp, môi trường CNTT thay đổi liên tục và hành vi người dùng ngày càng rủi ro.
+
+Các chuyên gia nghiên cứu mối đe dọa và nhà khoa học dữ liệu của Trend Micro sử dụng các kỹ thuật tiên tiến để phân tích dữ liệu và phát hiện mối đe dọa theo thời gian thực.
+
+Điều này đạt được thông qua **trí tuệ an ninh mạng nâng cao (augmented cyber intelligence)**, kết hợp giữa trí tuệ nhân tạo (AI), machine learning và kiến thức chuyên sâu từ các chuyên gia bảo mật – những người liên tục nghiên cứu các chiến thuật, kỹ thuật và quy trình (TTPs) của tội phạm mạng.
+
+Trend Micro sử dụng các hệ thống phân tích bảo mật tự động để nhanh chóng xử lý dữ liệu mối đe dọa toàn cầu và cung cấp khả năng bảo vệ phù hợp với các rủi ro có khả năng ảnh hưởng đến bạn.
+
+Để hỗ trợ quy mô này, họ đã xây dựng một trong những hạ tầng cloud lớn nhất thế giới, cho phép tương quan hóa các mối đe dọa trên nhiều lớp bảo mật, đồng thời cung cấp khả năng quan sát toàn diện trên nhiều nền tảng, hệ thống và người dùng trên toàn cầu.
+
+[Connected Security for a Connected World](https://youtu.be/vh-hA2IwDhI?si=kSbfG3VVRuogjDjN)
+
+---
+
+## Mục tiêu học tập
+
+- Học cách xây dựng kiến trúc cloud-native để bảo vệ dữ liệu lưu trữ trong Amazon S3  
+- Hiểu cách thiết kế workflow bảo mật liền mạch để bảo vệ file được upload từ người dùng trên toàn cầu  
+- Có trải nghiệm thực hành triển khai và cấu hình Cloud One – File Storage Security trên AWS  
+- Xác định các luồng dữ liệu cần tích hợp quét mã độc tự động trong pipeline xử lý dữ liệu  
+
+---
+
+## Đối tượng tham gia
+
+- Site Reliability Engineers (SREs)  
+- Developers  
+- DevOps Engineers  
+- Cloud Architects  
+- Solution Architects  
+- Nhóm bảo mật thông tin  
+- GRC teams  
+- Tech Leads và Program Managers (PM)  
