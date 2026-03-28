@@ -6,17 +6,61 @@ chapter : false
 pre : " <b> 4.2. </b> "
 ---
 
-#### 1. AWS Account
-To complete this workshop, you will need an active **AWS Account**. 
-+ If you do not have one, you can create a free account at [aws.amazon.com](https://aws.amazon.com/).
-+ Ensure you are logging in as an **IAM User** with sufficient permissions (e.g., `AdministratorAccess`) rather than the Root User, following AWS security best practices.
+# File Storage Security Workshop
 
-#### 2. Local Environment
-This lab is designed to be executed entirely within the **AWS Management Console**, so you do not need to install complex local tools. However, you should have:
-+ A modern web browser (Google Chrome, Mozilla Firefox, or Microsoft Edge).
-+ A basic text editor (such as Visual Studio Code, Notepad++, or Sublime Text) to review and slightly modify the provided source code (HTML, Python) before uploading it to AWS.
+## Requirements
 
-#### 3. Source Code
-For this workshop, we have pre-written the frontend (HTML/JS) and backend (Python) code to save you time and allow you to focus on the AWS infrastructure setup.
-+ You will be provided with the source code snippets in the upcoming deployment steps. Make sure to create a local folder on your computer (e.g., `SecScanner-Lab`) to save these files as we progress.
+1. **An AWS Account** with `AdministratorAccess` permission. [Sign up here](https://portal.aws.amazon.com/billing/signup#/start) if it’s not already the case! You can learn about the `AdministratorAccess` permissions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
+2. **An Amazon S3 bucket** that you want to use in this workshop. If you don’t have one, you can learn how to create one [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html).
 
+## Register for a FREE TRIAL - Cloud One Account
+
+We have two ways to help customers with a Free trial:
+
+### 1º Subscribe on AWS Marketplace for 30 days free trial
+
+
+1. Log in your AWS account: [AWS Console](https://console.aws.amazon.com/)
+2. Go to **AWS Marketplace Subscriptions - Trend Micro - Cloud One**, then click “Continue to Subscribe”.
+
+<img width="1974" height="968" alt="image" src="https://github.com/user-attachments/assets/2ae3fdeb-1e27-4570-aa09-022076e216e5" />
+3. Click on “Subscribe”.
+4. You will need to click on **Set Up Your Account** to connect with your existing Cloud One account (without any current subscription) or create a new Cloud One Account.
+5. Login with your existing Cloud One account or Sign Up for a new account.
+6. Fill up the form details and click **Sign Up**.
+7. After you will see a message about your Sign Up in Cloud One.
+8. Go to your mailbox from the email that you used to register in Cloud One and verify your registration from Cloud One. The email will look like the below example, you will just need to click **Verify Email**.
+9. Now you will need to sign in to complete the verification process.
+10. Select the Account that you created and then click **Go**.
+11. To make sure the subscription was enabled correctly, click on “Subscription Management”.
+12. You will see that subscription shows as subscribed and the Subscription Type is AWS Marketplace. Perfect!! You are all set up.
+
+### 2º Register on Cloud One portal for 30 days free trial
+
+-> [CLICK HERE](https://trendmicro-aspera.awsworkshop.io/10_cloudone_account_setup.html) to see the steps-by-steps on how to create your Cloud One Account.
+
+
+
+---
+
+## Supported AWS Regions
+
+**Cloud One - File Storage Security** can reside in the following Amazon Web Services (AWS) regions:
+
+* US East (N. Virginia) `us-east-1`
+* US East (Ohio) `us-east-2`
+* US West (N. California) `us-west-1`
+* US West (Oregon) `us-west-2`
+* Asia Pacific (Mumbai) `ap-south-1`
+* Asia Pacific (Osaka) `ap-northeast-3`
+* Asia Pacific (Seoul) `ap-northeast-2`
+* Asia Pacific (Singapore) `ap-southeast-1`
+* Asia Pacific (Sydney) `ap-southeast-2`
+* Asia Pacific (Tokyo) `ap-northeast-1`
+* Canada (Central) `ca-central-1`
+* Europe (Frankfurt) `eu-central-1`
+* Europe (Ireland) `eu-west-1`
+* Europe (London) `eu-west-2`
+* Europe (Paris) `eu-west-3`
+* Europe (Stockholm) `eu-north-1`
+* South America (São Paulo) `sa-east-1`
