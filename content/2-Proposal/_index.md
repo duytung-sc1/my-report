@@ -16,7 +16,7 @@ pre: " <b> 2. </b> "
 - **Duong Nguyen Binh** – Student ID: **SE194067**
 - **Vinh Tran** – Student ID: **SE193927**
 - **Nguyen Duy Tung** – Student ID: **SE196572**
-- **Nguyen Tri** – Student ID: **[ID]**
+- **Nguyen Duc Tri** – Student ID: **SE194091**
 
 ---
 
