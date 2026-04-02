@@ -16,7 +16,7 @@ pre: " <b> 2. </b> "
 - **Dương Nguyên Bình** – MSSV: **SE194067**
 - **Vinh Trần** – MSSV: **SE193927**
 - **Nguyễn Duy Tùng** – MSSV: **SE196572**
-- **Nguyễn Trí** – MSSV: **[Mã số]**
+- **Nguyễn Đức Trí** – MSSV: **SE194091**
 
 ---
 
