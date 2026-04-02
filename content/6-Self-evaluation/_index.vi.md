@@ -16,9 +16,9 @@ Về tinh thần làm việc, tôi luôn cố gắng hoàn thành tốt các nhi
 
 | STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **Kiến thức và kỹ năng chuyên môn** | Mức độ hiểu lĩnh vực, khả năng áp dụng kiến thức vào thực tế, sử dụng công cụ và chất lượng công việc | ✅ | ☐ | ☐ |
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Mức độ hiểu lĩnh vực, khả năng áp dụng kiến thức vào thực tế, sử dụng công cụ và chất lượng công việc | ☐ |  ✅| ☐ |
 | 2 | **Khả năng học hỏi** | Khả năng tiếp thu kiến thức mới và học nhanh | ☐ | ✅ | ☐ |
-| 3 | **Tính chủ động** | Chủ động trong công việc, tự tìm hiểu và thực hiện nhiệm vụ mà không chờ nhắc nhở | ✅ | ☐ | ☐ |
+| 3 | **Tính chủ động** | Chủ động trong công việc, tự tìm hiểu và thực hiện nhiệm vụ mà không chờ nhắc nhở | ☐ | ✅ | ☐ |
 | 4 | **Tinh thần trách nhiệm** | Hoàn thành công việc đúng thời hạn và đảm bảo chất lượng | ✅ | ☐ | ☐ |
 | 5 | **Tính kỷ luật** | Tuân thủ thời gian, quy định và quy trình làm việc | ☐ | ✅ | ☐ |
 | 6 | **Tinh thần cầu tiến** | Sẵn sàng tiếp nhận góp ý và cải thiện bản thân | ✅ | ☐ | ☐ |
@@ -27,7 +27,7 @@ Về tinh thần làm việc, tôi luôn cố gắng hoàn thành tốt các nhi
 | 9 | **Tác phong chuyên nghiệp** | Thái độ tôn trọng đồng nghiệp, đối tác và môi trường làm việc | ✅ | ☐ | ☐ |
 | 10 | **Kỹ năng giải quyết vấn đề** | Nhận diện vấn đề, đề xuất hướng xử lý và thể hiện sự sáng tạo | ☐ | ✅ | ☐ |
 | 11 | **Mức độ đóng góp cho dự án/nhóm** | Hiệu quả công việc, ý tưởng đóng góp và sự ghi nhận từ nhóm | ☐ | ✅ | ☐ |
-| 12 | **Tổng thể** | Đánh giá chung cho toàn bộ quá trình thực tập | ✅ | ☐ | ☐ |
+| 12 | **Tổng thể** | Đánh giá chung cho toàn bộ quá trình thực tập | ☐ | ✅ | ☐ |
 
 ### Những điểm cần cải thiện
 
