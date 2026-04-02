@@ -17,8 +17,6 @@ chapter: false
 
 &emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** AWS082025
-
 &emsp; **Công ty thực tập:** Bootcamp - First Cloud AI Journey @ AWS Study Group.
 
 &emsp; **Vị trí thực tập:** FCJ Cloud Intern
