@@ -142,7 +142,7 @@ The **IrisAuth** system is deployed using a pure **serverless** model on AWS, en
 - Email invitations are sent via **Amazon SES** with templates stored on SES.
 - All Lambda logs are automatically streamed to **CloudWatch Logs**; **CloudWatch Alarms** trigger when error rates spike.
 - WebSocket connections (execute endpoint) go through **API Gateway WebSocket API**, routed to a Lambda handler.
-![AWS Architecture](/images/2-Proposal/kientruc_aws.jpg)
+![AWS Architecture](/images/2-Proposal/kientrucaws.jpg)
 ## 4.3. Authentication System (Self-built, No external JWT libraries)
 
 The system does not rely on external JWT libraries.
@@ -354,8 +354,26 @@ The `obfuscator.py` file is a completely standalone Python obfuscation tool oper
 | 8. Testing & Deploy | Unit testing, integration testing, load testing, CloudWatch alarm tuning, production deployment | Weeks 13–14 |
 
 ---
+## VII. Cost Estimation
 
-# VII. EXPECTED OUTCOMES
+
+Typical monthly infrastructure cost (Free Tier / Small Scale): ~$4.32
+
+
+- Amazon S3: ~$0.80/month  
+- Amazon API Gateway: ~$0.35/month  
+- Amazon DynamoDB: ~$0.60/month  
+- Amazon CloudWatch: ~$0.50/month  
+- Amazon SES: ~$0.09/month  
+- AWS IAM: ~$0.00/month  
+- Amazon CloudFront: ~$0.77/month  
+
+
+Lambda and DynamoDB are mostly covered by the free tier at low usage levels.
+
+---
+
+# VIII. EXPECTED OUTCOMES
 
 Upon completion, the project will deliver:
 
@@ -369,6 +387,13 @@ Upon completion, the project will deliver:
 
 ---
 
-# VIII. TECHNOLOGIES USED
+### IX. Long-term Value
 
-**Node.js**, **Express.js**, **AWS Lambda**, **Amazon DynamoDB**, **Amazon S3**, **Amazon CloudFront**, **Amazon CloudWatch**, **Amazon SES**, **AWS API Gateway (REST + WebSocket)**, **AWS WAF**, **AWS KMS**, **AWS IAM**, **ECDH X25519**, **AES-256-GCM**, **HMAC-SHA256**, **HKDF-SHA256**, **PBKDF2-SHA256**, **Python urllib**, **Python AST Manipulation**, **Gzip Compression**, **CORS**, **Rate Limiting**, **Role-Based Access Control (RBAC)**, **Discord Webhook**.
+
+- **Productization:** can evolve into a SaaS license management platform  
+- **Improved security:** reduces risk of piracy and unauthorized usage  
+- **High scalability:** suitable for tools, scripts, SaaS products  
+- **Real-world application:** applicable for startups and commercial products  
+- **Skill development:** applies DevOps, Cloud, and Security in practice  
+
+
