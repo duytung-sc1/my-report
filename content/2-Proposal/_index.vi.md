@@ -5,8 +5,7 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-# GuardScript — Code Protector Platform
-
+# GuardScript — Nền tảng bảo vệ mã nguồn
 ## Đề xuất dự án
 
 ### Thông tin sinh viên / Nhóm thực hiện
