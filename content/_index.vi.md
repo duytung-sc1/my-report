@@ -23,7 +23,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 05/01/2026 đến ngày 18/04/2026
 
-<img src="/images/avarta.jpg" width="150" style="border-radius: 14px;">
+<img src="/images/avatar.jpg" width="150" style="border-radius: 14px;">
 
 
 
