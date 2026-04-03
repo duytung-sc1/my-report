@@ -354,7 +354,7 @@ The `obfuscator.py` file is a completely standalone Python obfuscation tool oper
 | 8. Testing & Deploy | Unit testing, integration testing, load testing, CloudWatch alarm tuning, production deployment | Weeks 13–14 |
 
 ---
-## VII. Cost Estimation
+# VII. Cost Estimation
 
 
 Typical monthly infrastructure cost (Free Tier / Small Scale): ~$4.32
@@ -387,7 +387,7 @@ Upon completion, the project will deliver:
 
 ---
 
-### IX. Long-term Value
+# IX. Long-term Value
 
 
 - **Productization:** can evolve into a SaaS license management platform  
