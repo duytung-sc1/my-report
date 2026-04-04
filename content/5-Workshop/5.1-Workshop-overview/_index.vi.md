@@ -20,7 +20,7 @@ Nền tảng gồm năm lớp:
 
 ## Sơ đồ kiến trúc
 
-![Kiến trúc hệ thống GuardScript](/images/2-Proposal/architecture.jpg)
+![Kiến trúc hệ thống GuardScript](/images/2-Proposal/kientrucaws.jpg)
 
 ## Luồng request
 
