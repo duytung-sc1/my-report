@@ -3,7 +3,7 @@ title: "Dọn dẹp tài nguyên"
 date: 2026-03-26
 weight: 7
 chapter: false
-pre: " <b> 5.7. </b> "
+pre: " <b> 4.7. </b> "
 ---
 
 Khi bạn hoàn thành workshop, hãy làm theo các bước sau để xóa toàn bộ tài nguyên AWS và tránh phát sinh chi phí.
