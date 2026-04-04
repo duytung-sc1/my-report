@@ -35,7 +35,7 @@ Client (browser / loader)
   → CloudWatch Logs / Alarms / Dashboard
 ```
 
-![GuardScript Architecture](/images/2-Proposal/architecture.jpg)
+![GuardScript Architecture](/images/2-Proposal/kientrucaws.jpg)
 
 #### Content
 
