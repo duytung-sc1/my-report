@@ -3,7 +3,7 @@ title: "Giai đoạn 2: Triển khai hạ tầng AWS"
 date: 2026-03-26
 weight: 4
 chapter: false
-pre: " <b> 5.4. </b> "
+pre: " <b> 4.4. </b> "
 ---
 
 Trong giai đoạn này bạn sẽ dùng AWS SAM để build và deploy toàn bộ infrastructure stack của GuardScript, bao gồm Lambda, các bảng DynamoDB, S3 buckets, CloudFront, WebSocket API và CloudWatch.
