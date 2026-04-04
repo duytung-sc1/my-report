@@ -15,7 +15,7 @@ chapter: false
 
 &emsp; **Phone Number:** 0352135763
 
-&emsp; **Email:** nguyenduytung.131005@gmail.
+&emsp; **Email:** nguyenduytung.131005@gmail.com
 
 &emsp; **University:** FPT University
 
