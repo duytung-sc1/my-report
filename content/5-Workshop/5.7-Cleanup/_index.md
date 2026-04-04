@@ -3,7 +3,7 @@ title: "Cleanup"
 date: 2026-03-26
 weight: 7
 chapter: false
-pre: " <b> 5.7. </b> "
+pre: " <b> 4.7. </b> "
 ---
 
 When you are finished with the workshop, follow these steps to remove all AWS resources and avoid ongoing charges.
