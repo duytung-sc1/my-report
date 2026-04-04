@@ -21,7 +21,7 @@ chapter: false
 
 &emsp; **Major:** Information Assurance
 
-&emsp; **Class:** SE196572
+&emsp; **Student ID:** SE196572
 
 &emsp; **Internship Company:** Bootcamp - First Cloud AI Journey @ AWS Study Group.
 
