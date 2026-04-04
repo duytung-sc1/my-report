@@ -3,7 +3,7 @@ title: "Phase 1: Prepare Lambda Artifacts"
 date: 2026-03-26
 weight: 3
 chapter: false
-pre: " <b> 5.3. </b> "
+pre: " <b> 4.3. </b> "
 ---
 
 Before deploying the CloudFormation stack, you need to package the Lambda source code and upload it to an S3 bucket. AWS SAM will reference this artifact during deployment.
