@@ -20,7 +20,7 @@ The platform is composed of five layers:
 
 ## Architecture Diagram
 
-![GuardScript System Architecture](/images/2-Proposal/architecture.jpg)
+![GuardScript System Architecture](/images/2-Proposal/kientrucaws.jpg)
 
 ## Request Flow
 
