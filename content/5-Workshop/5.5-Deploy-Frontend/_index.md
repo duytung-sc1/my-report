@@ -3,7 +3,7 @@ title: "Phase 3: Deploy Frontend"
 date: 2026-03-26
 weight: 5
 chapter: false
-pre: " <b> 5.5. </b> "
+pre: " <b> 4.5. </b> "
 ---
 
 In this phase you will upload the static frontend assets to the S3 frontend bucket, then invalidate the CloudFront cache so the new assets are served immediately.
