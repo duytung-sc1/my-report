@@ -3,7 +3,7 @@ title: "Chuẩn bị"
 date: 2026-03-26
 weight: 2
 chapter: false
-pre: " <b> 5.2. </b> "
+pre: " <b> 4.2. </b> "
 ---
 
 Trước khi bắt đầu triển khai, hãy đảm bảo bạn đã chuẩn bị đầy đủ các công cụ và quyền truy cập sau.
