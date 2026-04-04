@@ -17,7 +17,7 @@ chapter: false
 
 &emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** SE196572
+&emsp; **Mã số sinh viên:** SE196572
 
 &emsp; **Công ty thực tập:** Bootcamp - First Cloud AI Journey @ AWS Study Group.
 
